@@ -1,6 +1,6 @@
 function saveName() {
     var name = document.getElementById('name-value').value
     localStorage.setItem("name", name)
-    location = '/'
+    location = 'index'
     return false
 }
