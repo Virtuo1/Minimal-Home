@@ -37,7 +37,7 @@ html, body, .central-wrapper {
 
 #time-date {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 #time {
@@ -47,6 +47,20 @@ html, body, .central-wrapper {
 
 #date {
     font-size: 28px;
+}
+
+#welcome {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#welcome a {
+    text-decoration: none;
+}
+
+#welcome a:hover {
+    opacity: .6;
 }
 
 #search input[type=text] {
@@ -103,4 +117,31 @@ html, body, .central-wrapper {
 
 .list li a:hover {
     text-decoration: underline;
+}
+
+/* Welcome Page */
+
+.welcome h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome input[type=text] {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: #0000006b;
+    border: none;
+    font-weight: 400;
+}
+
+.welcome p {
+    color: #ffffff4d;
+    text-align: center;
 }
