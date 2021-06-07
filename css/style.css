@@ -109,6 +109,10 @@ html, body, .central-wrapper {
     color: #818a8a;
 }
 
+.list ul {
+    list-style: none;
+}
+
 .list li a {
     list-style: none;
     text-decoration: none;
