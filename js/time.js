@@ -19,7 +19,7 @@ function displayClock() {
     var mm = monthNames[d.getMonth()];
     var dd = d.getDate();
     var min = (mins = ('0' + d.getMinutes()).slice(-2));
-    var hh = d.getHours();
+    var hh = (hours = ('0' + d.getHours()).slice(-2));
 
     var current_time = hh + ':' + min
     var current_date = mm + ' ' + dd
