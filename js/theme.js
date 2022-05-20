@@ -1,7 +1,7 @@
 let themes = [
-    { name: "system", icon: "/img/svg/circle-half-stroke-solid.svg" },
-    { name: "light", icon: "/img/svg/sun-solid.svg" },
-    { name: "dark", icon: "/img/svg/moon-solid.svg" },
+    { name: "system", icon: "img/svg/circle-half-stroke-solid.svg" },
+    { name: "light", icon: "img/svg/sun-solid.svg" },
+    { name: "dark", icon: "img/svg/moon-solid.svg" },
 ]
 
 let currentTheme = 0;
