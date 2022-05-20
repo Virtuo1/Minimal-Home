@@ -1,30 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,800;1,400&display=swap');
 
+:root {
+    --dark-ui-theme: #242727;
+    --dark-bg-theme: #161818cc;
+    --dark-foreground: #f4f4ff;
+    --light-ui-theme: #ffffff;
+    --light-bg-theme: #ffffffe8;
+    --light-foreground: #252535;
+}
+
+/* Dark theme */
+:root {
+    --ui-theme: var(--dark-ui-theme);
+    --bg-theme: var(--dark-bg-theme);
+    --foreground: var(--dark-foreground);
+}
+
+body.dark, body.dark a, body.dark input {
+    color: var(--dark-foreground) !important;
+}
+
+body.dark .central-wrapper {
+    background: var(--dark-bg-theme);
+}
+
+body.dark #search input[type=text] {
+    background-color: var(--dark-ui-theme)
+}
+
+body.dark .list {
+    background-color: var(--dark-ui-theme)
+}
+
+body.dark #date {
+    font-weight: 400;
+}
+
+body.dark .settings-buttons button {
+    filter: invert(1) !important;
+}
+
+body.dark .welcome input[type=text] {
+    background-color: #ffffff13 !important;
+}
+
+body.dark .welcome p {
+    color: var(--dark-foreground);
+}
+
+
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    :root {
+        --ui-theme: var(--light-ui-theme);
+        --bg-theme: var(--light-bg-theme);
+        --foreground: var(--light-foreground);
+    }
+
+    #date {
+        font-weight: 800;
+    }
+
+    .settings-buttons button {
+        filter: invert(0) !important;
+    }
+
+    .welcome input[type=text] {
+        background-color: #00000013 !important;
+    }
+}
+
+body.light, body.light a, body.light input {
+    color: var(--light-foreground) !important;
+}
+
+body.light .central-wrapper {
+    background: var(--light-bg-theme);
+}
+
+body.light #search input[type=text] {
+    background-color: var(--light-ui-theme)
+}
+
+body.light .list {
+    background-color: var(--light-ui-theme)
+}
+
+body.light #date {
+    font-weight: 800;
+}
+
+body.light .settings-buttons button {
+    filter: invert(0) !important;
+}
+
+body.light .welcome input[type=text] {
+    background-color: #00000013;
+}
+
+body.light .welcome p {
+    color: var(--light-foreground);
+}
+
+/* body * {
+    transition: .5s;
+} */
+
+/* Begin settings */
+
+.settings-buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: .5;
+}
+
+.settings-buttons:hover {
+    opacity: 1;
+}
+
+.settings-buttons button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    filter: invert(1);
+}
+
+.settings-buttons button img {
+    width: 18px;
+    vertical-align: bottom;
+}
+
+/* End settings */
+
 *, html, body {
     margin: 0;
     padding: 0;
     font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
     font-weight: 300;
-    color: #f4f4ff;
 }
 
 html, body, .central-wrapper {
     height: 100%;
 }
 
-.overlay {
-    background-image: url('../img/bg.jpg');
+body, a, input {
+    color: var(--foreground);
+}
+
+body {
+    background: url('../img/bg.jpg');
     background-position: center;
     background-size: cover;
-    z-index: 0;
-    opacity: .2;
-    position: absolute;
-    width: 100%;
-    height: 100%;
 }
 
 .central-wrapper {
-    background-color: #161818;
+    background: var(--bg-theme);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,12 +198,11 @@ html, body, .central-wrapper {
 #search input[type=text] {
     padding: 10px 20px;
     margin: 0;
-    outline: none;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 40px;
     border-radius: 100px;
-    background-color: #242727;
+    background-color: var(--ui-theme);
     border: none;
     font-weight: 400;
     box-shadow: 0px 5px 0px #0000002e
@@ -83,7 +214,9 @@ html, body, .central-wrapper {
 
 #links {
     margin: auto;
-    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
     font-size: 0;
 }
 
@@ -91,9 +224,8 @@ html, body, .central-wrapper {
     display: inline-block;
     text-align: center;
     width: 160px;
-    margin: 0 20px 20px;
     padding: 20px 0;
-    background-color: #242727;
+    background-color: var(--ui-theme);
     vertical-align: top;
     box-shadow: 0px 5px 0px #0000002e
 }
@@ -140,12 +272,13 @@ html, body, .central-wrapper {
     box-sizing: border-box;
     margin-bottom: 20px;
     border-radius: 4px;
-    background-color: #0000006b;
+    background-color: #ffffff13;
     border: none;
     font-weight: 400;
 }
 
 .welcome p {
-    color: #ffffff4d;
+    color: var(--foreground);
+    opacity: .7;
     text-align: center;
 }

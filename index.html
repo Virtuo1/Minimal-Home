@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="img/favicon.png"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png"/>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Home</title>
 </head>
-<body>
-    <div class="overlay"></div>
+<body class="preload">
+    <div class="settings-buttons">
+        <button onclick="toggleTheme()"><img id="theme-button-img" src="/img/svg/circle-half-stroke-solid.svg" alt=""></button>
+        <!-- <button onclick="location = '/settings.html'"><img src="/img/svg/pen-solid.svg" alt=""></button> -->
+    </div>
     <div class="central-wrapper">
         <div class="main-wrapper">
             <div id="time-date">
@@ -17,7 +20,7 @@
                 <div id="date"></div>
             </div>
             <div id="welcome">
-                <h1>Welcome <a href="welcome" id="name"></a></h1>
+                <h1>Welcome <a href="/welcome.html" id="name"></a></h1>
             </div>
             <div id="search">
                 <form onsubmit="return search();" autocomplete="off">
@@ -51,8 +54,10 @@
             </div>
         </div>
     </div>
-    <script src="js/time.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/welcome.js"></script>
+    <script src="/js/time.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/welcome.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/links.js"></script>
 </body>
 </html>
